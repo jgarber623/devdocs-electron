@@ -1,5 +1,7 @@
 const {app, ipcMain, Menu, shell} = require('electron');
 
+const pkg = require('../../package.json');
+
 let appMenu = {
 	label: app.getName(),
 	submenu: [
@@ -146,6 +148,24 @@ let windowMenu = {
 	]
 };
 
+let helpMenu = {
+	role: 'help',
+	submenu: [
+		{
+			label: 'Report an Issue',
+			click() {
+				shell.openExternal(pkg.bugs.url);
+			}
+		},
+		{
+			label: 'View Project on GitHub',
+			click() {
+				shell.openExternal(pkg.homepage);
+			}
+		}
+	]
+};
+
 module.exports = class MainMenu {
 	constructor() {
 		this.addSubscriptions().build();
@@ -170,6 +190,6 @@ module.exports = class MainMenu {
 	}
 
 	get template() {
-		return [appMenu, fileMenu, editMenu, viewMenu, historyMenu, windowMenu];
+		return [appMenu, fileMenu, editMenu, viewMenu, historyMenu, windowMenu, helpMenu];
 	}
 };
