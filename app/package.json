@@ -1,7 +1,7 @@
 {
   "name": "devdocs-electron",
   "productName": "DevDocs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A macOS app built using Electron for the DevDocs API Documentation Browser website.",
   "homepage": "https://github.com/jgarber623/devdocs-electron",
   "bugs": {
