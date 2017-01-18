@@ -1,13 +1,7 @@
-{
-	let $el;
+window.addEventListener('load', () => {
+	let stylesheet = document.createElement('style');
+	let cssText = document.createTextNode('._sidebar-footer-light { display: none !important; }');
 
-	let interval = window.setInterval(() => {
-		$el = document.querySelector('._sidebar-footer-light');
-
-		if ($el instanceof HTMLElement) {
-			clearInterval(interval);
-
-			$el.style.display = 'none';
-		}
-	}, 10);
-}
+	stylesheet.appendChild(cssText);
+	document.querySelector('head').appendChild(stylesheet);
+});
