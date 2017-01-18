@@ -1,6 +1,6 @@
 const {app, ipcMain, Menu, shell} = require('electron');
 
-const pkg = require('../../package.json');
+const pkg = require('../package.json');
 
 let appMenu = {
 	label: app.getName(),

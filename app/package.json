@@ -13,27 +13,13 @@
     "email": "jason@sixtwothree.org",
     "url": "https://sixtwothree.org"
   },
-  "main": "index.js",
+  "main": "main/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jgarber623/devdocs-electron.git"
   },
-  "scripts": {
-    "dist": "build --mac",
-    "pack": "build --mac --dir",
-    "postinstall": "install-app-deps",
-    "start": "electron ."
+  "dependencies": {
+    "radioradio": "^0.2.2"
   },
-  "devDependencies": {
-    "electron": "^1.4.14",
-    "electron-builder": "^11.4.4"
-  },
-  "private": true,
-  "build": {
-    "appId": "org.sixtwothree.devdocs-electron",
-    "electronDist": "node_modules/electron/dist",
-    "mac": {
-      "category": "public.app-category.developer-tools"
-    }
-  }
+  "private": true
 }
