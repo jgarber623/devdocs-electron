@@ -1,0 +1,30 @@
+{
+  "name": "devdocs-electron",
+  "productName": "DevDocs",
+  "version": "0.1.0",
+  "description": "A macOS app built using Electron for the DevDocs API Documentation Browser website.",
+  "homepage": "https://github.com/jgarber623/devdocs-electron",
+  "bugs": {
+    "url": "https://github.com/jgarber623/devdocs-electron/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jason Garber",
+    "email": "jason@sixtwothree.org",
+    "url": "https://sixtwothree.org"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jgarber623/devdocs-electron.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "devDependencies": {
+    "electron": "^1.4.14",
+    "radioradio": "^0.2.2"
+  }
+}

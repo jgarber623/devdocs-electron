@@ -1,0 +1,47 @@
+.window {
+	background: #f0f0f0;
+}
+
+.window-header {
+	border-bottom: 1px solid #d9d9d9;
+	height: 38px;
+}
+
+.window-header .toolbar-actions {
+	margin: 0;
+	padding: 8px 78px;
+}
+
+.window-header .btn[disabled],
+.window-header .btn[disabled] .icon {
+	color: #b7b7b7;
+}
+
+.window-header .btn[disabled]:active {
+	background-color: #fcfcfc;
+    background-image: linear-gradient(to bottom, #fcfcfc 0%, #f1f1f1 100%);
+}
+
+.window-header .btn:focus {
+	border-color: #35b5f4;
+	box-shadow: 0 0 1px #35b5f4;
+}
+
+.network-status {
+	color: #a19fa1;
+	padding: 9px 0;
+	position: absolute;
+	right: 18px;
+	text-transform: uppercase;
+	top: 0;
+	width: 62px;
+}
+
+.network-status-text {
+	font-size: 10px;
+	margin-left: 3px;
+}
+
+.window-content webview {
+	flex: 1;
+}

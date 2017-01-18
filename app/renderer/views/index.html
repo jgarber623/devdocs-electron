@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>DevDocs</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="../stylesheets/photon.css">
+	<link rel="stylesheet" href="../stylesheets/index.css">
+</head>
+<body>
+
+	<div class="window">
+		<header class="window-header" role="banner">
+			<nav class="toolbar-actions" role="navigation">
+				<div class="btn-group">
+					<button type="button" class="btn btn-mini btn-default" id="back-button" title="Show the previous page" disabled>
+						<span class="icon icon-left-open-big"></span>
+					</button>
+					<button type="button" class="btn btn-mini btn-default" id="forward-button" title="Show the next page" disabled>
+						<span class="icon icon-right-open-big"></span>
+					</button>
+				</div>
+
+				<button type="button" class="btn btn-mini btn-default" id="home-button" title="Go to the homepage" disabled>
+					<span class="icon icon-home"></span>
+				</button>
+			</nav>
+
+			<div class="network-status" id="network-status">
+				<span class="icon icon-signal"></span>
+				<span class="network-status-text">Offline</span>
+			</div>
+		</header>
+
+		<main class="window-content" role="main">
+			<webview src="http://devdocs.io/" id="webview" preload="../javascripts/preload.js"></webview>
+		</main>
+	</div>
+
+	<script>require('../javascripts/index.js');</script>
+
+</body>
+</html>
