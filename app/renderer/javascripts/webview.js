@@ -1,4 +1,4 @@
-const {shell} = require('electron');
+const {ipcRenderer, shell} = require('electron');
 const RadioRadio = require('radioradio');
 
 module.exports = class Webview {
@@ -28,15 +28,35 @@ module.exports = class Webview {
 	}
 
 	addSubscriptions() {
-		RadioRadio.subscribe('navigate.goToURL', (data) => {
-			this.$el.loadURL(data.url);
+		ipcRenderer.on('navigate.loadURL', (event, url) => {
+			this.loadURL(url);
+		});
+
+		ipcRenderer.on('navigate.goToOffset', (event, offset) => {
+			this.goToOffset(offset);
+		});
+
+		RadioRadio.subscribe('navigate.loadURL', (data) => {
+			this.loadURL(data.url);
 		});
 
 		RadioRadio.subscribe('navigate.goToOffset', (data) => {
 			if (data.hasOwnProperty('offset')) {
-				this.$el.goToOffset(data.offset);
+				this.goToOffset(data.offset);
 			}
 		});
+
+		return this;
+	}
+
+	goToOffset(offset) {
+		this.$el.goToOffset(offset);
+
+		return this;
+	}
+
+	loadURL(url) {
+		this.$el.loadURL(url);
 
 		return this;
 	}

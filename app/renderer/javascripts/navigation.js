@@ -43,7 +43,7 @@ module.exports = class Navigation {
 		});
 
 		this.homeButton = new Button(document.querySelector('#home-button'), {
-			topic: 'navigate.goToURL',
+			topic: 'navigate.loadURL',
 			data: {
 				url: 'http://devdocs.io/'
 			}

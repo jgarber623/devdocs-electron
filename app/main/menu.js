@@ -131,9 +131,7 @@ let historyMenu = {
 			accelerator: 'Cmd+Shift+H',
 			enabled: false,
 			click(menuItem, browserWindow, event) {
-				browserWindow.webContents.send('navigate.goToURL', {
-					url: 'http://devdocs.io/'
-				});
+				browserWindow.webContents.send('navigate.loadURL', 'http://devdocs.io/');
 			}
 		}
 	]
