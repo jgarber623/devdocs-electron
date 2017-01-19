@@ -7,6 +7,8 @@ devdocs-electron is a macOS app built using [Electron](http://electron.atom.io/)
 - [Download the latest release](https://github.com/jgarber623/devdocs-electron/releases)
 - [Report an Issue](https://github.com/jgarber623/devdocs-electron/issues)
 
+![devdocs-electron screenshot](https://d3vv6lp55qjaqc.cloudfront.net/items/1Z423Z1T3K0904002u2I/devdocs-screenshot.png)
+
 ## Contributing
 
 If you'd like to help improve devdocs-electron, give a look through this project's [CONTRIBUTING.md](https://github.com/jgarber623/devdocs-electron/bÂlob/master/CONTRIBUTING.md).
