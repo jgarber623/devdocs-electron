@@ -15,6 +15,8 @@ If you'd like to help improve devdocs-electron, give a look through this project
 
 devdocs-electron wouldn't be possible without the hard work of [Thibaut Courouble](http://thibaut.me/) and [DevDocs' many contributors](https://github.com/Thibaut/devdocs/graphs/contributors). It is not an official DevDocs project and is neither affiliated with nor endorsed by the DevDocs team.
 
+Interface icons and styling provided by [Photon](http://photonkit.com/). Application icon was created using [DevDocs Fluid Icon](https://github.com/jgarber623/devdocs-fluid-icon).
+
 devdocs-electron is written and maintained by [Jason Garber](https://sixtwothree.org/).
 
 ## License
