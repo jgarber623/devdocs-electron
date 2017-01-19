@@ -3,7 +3,7 @@ const onlineString = 'Online';
 
 module.exports = class NetworkStatus {
 	constructor() {
-		this.$el = document.querySelector('#network-status .network-status-text');
+		this.$el = document.querySelector('#network-status-text');
 
 		this.addEventListeners();
 

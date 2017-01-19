@@ -7,38 +7,38 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" href="../stylesheets/photon.css">
 	<link rel="stylesheet" href="../stylesheets/index.css">
 </head>
 <body>
 
-	<div class="window">
-		<header class="window-header" role="banner">
-			<nav class="toolbar-actions" role="navigation">
-				<div class="btn-group">
-					<button type="button" class="btn btn-mini btn-default" id="back-button" title="Show the previous page" disabled>
-						<span class="icon icon-left-open-big"></span>
-					</button>
-					<button type="button" class="btn btn-mini btn-default" id="forward-button" title="Show the next page" disabled>
-						<span class="icon icon-right-open-big"></span>
-					</button>
-				</div>
-
-				<button type="button" class="btn btn-mini btn-default" id="home-button" title="Go to the homepage" disabled>
-					<span class="icon icon-home"></span>
+	<header class="header" role="banner">
+		<nav class="navigation" role="navigation">
+			<div class="button-group">
+				<button type="button" class="button" id="back-button" title="Show the previous page" disabled>
+					<span class="icon" data-glyph="left-open-big"></span>
+					<span aria-hidden>Back</span>
 				</button>
-			</nav>
-
-			<div class="network-status" id="network-status">
-				<span class="icon icon-signal"></span>
-				<span class="network-status-text">Offline</span>
+				<button type="button" class="button" id="forward-button" title="Show the next page" disabled>
+					<span class="icon" data-glyph="right-open-big"></span>
+					<span aria-hidden>Forward</span>
+				</button>
 			</div>
-		</header>
 
-		<main class="window-content" role="main">
-			<webview id="webview"></webview>
-		</main>
-	</div>
+			<button type="button" class="button" id="home-button" title="Go to the homepage" disabled>
+				<span class="icon" data-glyph="home"></span>
+				<span aria-hidden>Home</span>
+			</button>
+		</nav>
+
+		<div class="network-status">
+			<span class="icon" data-glyph="signal"></span>
+			<span class="network-status-text" id="network-status-text">Offline</span>
+		</div>
+	</header>
+
+	<main class="main" role="main">
+		<webview id="webview"></webview>
+	</main>
 
 	<script>require('../javascripts/index.js');</script>
 

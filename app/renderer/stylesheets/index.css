@@ -1,35 +1,154 @@
-.window {
-	background: #f0f0f0;
+@font-face {
+	font-family: "photon-entypo";
+    src: url("../fonts/photon-entypo.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
-.window-header {
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	height: 100%;
+}
+
+body {
+	background: #f0f0f0;
+	bottom: 0;
+	display: flex;
+    flex-direction: column;
+	font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, "Segoe UI", sans-serif;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	right: 0;
+    top: 0;
+}
+
+[aria-hidden] {
+	display: none;
+}
+
+.header {
+	-webkit-app-region: drag;
 	border-bottom: 1px solid #d9d9d9;
 	height: 38px;
 }
 
-.window-header .toolbar-actions {
-	margin: 0;
-	padding: 8px 78px;
+.navigation {
+	padding: 8px 82px;
 }
 
-.window-header .btn[disabled],
-.window-header .btn[disabled] .icon {
+.button {
+	-webkit-app-region: no-drag;
+	background-color: #fcfcfc;
+	background-image: linear-gradient(to bottom, #fcfcfc 0%, #f1f1f1 100%);
+	border: 1px solid transparent;
+	border-bottom-color: #a19fa1;
+	border-left-color: #c2c0c2;
+	border-right-color: #c2c0c2;
+	border-top-color: #c2c0c2;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+	color: #737475;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+	padding: 3px 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button:focus {
+	border-color: #35b5f4;
+	box-shadow: 0 0 1px #35b5f4;
+	outline: none;
+}
+
+.button:active {
+	background-color: #ddd;
+	background-image: none;
+}
+
+.button:active,
+.button:focus {
+	position: relative;
+	z-index: 1;
+}
+
+.button[disabled] {
 	color: #b7b7b7;
 }
 
-.window-header .btn[disabled]:active {
+.button[disabled]:active {
 	background-color: #fcfcfc;
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #f1f1f1 100%);
 }
 
-.window-header .btn:focus {
-	border-color: #35b5f4;
-	box-shadow: 0 0 1px #35b5f4;
+.button-group {
+	display: inline-block;
+	margin-right: 8px;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.button-group .button {
+	float: left;
+}
+
+.button-group .button + .button {
+	margin-left: -1px;
+}
+
+.button-group .button:first-child {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.button-group .button:last-child {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.icon {
+	display: inline-block;
+	font-size: 14px;
+	height: 14px;
+	line-height: 1;
+	width: 14px;
+}
+
+.icon:before {
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	font-family: "photon-entypo";
+	speak: none;
+}
+
+.icon[data-glyph="home"]:before {
+	content: "\e821";
+}
+
+.icon[data-glyph="left-open-big"]:before {
+	content: "\e87c";
+}
+
+.icon[data-glyph="right-open-big"]:before {
+	content: "\e87d";
+}
+
+.icon[data-glyph="signal"]:before {
+	content: "\e8a7";
 }
 
 .network-status {
 	color: #a19fa1;
-	padding: 9px 0;
+	padding: 8px 0 12px 0;
 	position: absolute;
 	right: 18px;
 	text-transform: uppercase;
@@ -39,9 +158,14 @@
 
 .network-status-text {
 	font-size: 10px;
-	margin-left: 3px;
+	margin-left: 2px;
 }
 
-.window-content webview {
+.main {
+	display: flex;
+    flex: 1;
+}
+
+.main webview {
 	flex: 1;
 }
