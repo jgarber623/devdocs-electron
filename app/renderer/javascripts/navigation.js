@@ -1,6 +1,8 @@
 const {ipcRenderer} = require('electron');
 const RadioRadio = require('radioradio');
 
+const config = require('../../config');
+
 class Button {
 	constructor($el, options) {
 		this.$el = $el;
@@ -45,7 +47,7 @@ module.exports = class Navigation {
 		this.homeButton = new Button(document.querySelector('#home-button'), {
 			topic: 'navigate.loadURL',
 			data: {
-				url: 'http://devdocs.io/'
+				url: config.urls.home
 			}
 		});
 

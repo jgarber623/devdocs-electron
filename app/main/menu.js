@@ -1,5 +1,6 @@
 const {app, ipcMain, Menu, shell} = require('electron');
 
+const config = require('../config');
 const pkg = require('../package.json');
 
 let appMenu = {
@@ -114,7 +115,7 @@ let historyMenu = {
 			label: 'Back',
 			accelerator: 'Cmd+Left',
 			enabled: false,
-			click(menuItem, browserWindow, event) {
+			click(menuItem, browserWindow) {
 				browserWindow.webContents.send('navigate.goToOffset', -1);
 			}
 		},
@@ -122,7 +123,7 @@ let historyMenu = {
 			label: 'Forward',
 			accelerator: 'Cmd+Right',
 			enabled: false,
-			click(menuItem, browserWindow, event) {
+			click(menuItem, browserWindow) {
 				browserWindow.webContents.send('navigate.goToOffset', 1);
 			}
 		},
@@ -130,8 +131,8 @@ let historyMenu = {
 			label: 'Home',
 			accelerator: 'Cmd+Shift+H',
 			enabled: false,
-			click(menuItem, browserWindow, event) {
-				browserWindow.webContents.send('navigate.loadURL', 'http://devdocs.io/');
+			click(menuItem, browserWindow) {
+				browserWindow.webContents.send('navigate.loadURL', config.urls.home);
 			}
 		}
 	]

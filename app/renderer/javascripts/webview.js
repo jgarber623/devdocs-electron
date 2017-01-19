@@ -1,20 +1,24 @@
 const {ipcRenderer, shell} = require('electron');
 const RadioRadio = require('radioradio');
 
+const config = require('../../config');
+
 module.exports = class Webview {
 	constructor() {
 		this.$el = document.querySelector('#webview');
-		this.homeURL = this.$el.getAttribute('src');
+
+		this.$el.setAttribute('src', config.urls.home);
+		this.$el.setAttribute('preload', '../javascripts/preload.js');
 
 		this.addEventListeners().addSubscriptions();
 	}
 
 	addEventListeners() {
-		this.$el.addEventListener('did-navigate-in-page', () => {
+		this.$el.addEventListener('did-navigate-in-page', (event) => {
 			RadioRadio.publish('navigate.update', {
 				canGoBack: this.$el.canGoBack(),
 				canGoForward: this.$el.canGoForward(),
-				canGoHome: this.$el.getURL() !== this.homeURL
+				canGoHome: event.url !== config.urls.home
 			});
 		});
 
