@@ -9,6 +9,16 @@ devdocs-electron is a macOS app built using [Electron](http://electron.atom.io/)
 
 ![devdocs-electron screenshot](https://d3vv6lp55qjaqc.cloudfront.net/items/1Z423Z1T3K0904002u2I/devdocs-screenshot.png)
 
+## Installation Notes
+
+1. [Download the latest release](https://github.com/jgarber623/devdocs-electron/releases) (either `.zip` or `.dmg` will do).
+1. Unzip the `.zip` file or mount the `.dmg` downloaded file.
+1. Drag the DevDocs app to `/Applications`.
+1. Open up `/Applications`, right-click on the DevDos app, and click "Open."
+1. Accept the prompt and you're good to go!
+
+The prompt is a side effect of devdocs-electron not being a "signed" macOS app. Signing apps requires an expensive Apple Developer account.
+
 ## Contributing
 
 If you'd like to help improve devdocs-electron, give a look through this project's [CONTRIBUTING.md](https://github.com/jgarber623/devdocs-electron/bÂlob/master/CONTRIBUTING.md).
