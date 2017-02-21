@@ -29,6 +29,10 @@ module.exports = class MainWindow {
 			this.browserWindow = null;
 		});
 
+		this.browserWindow.on('focus', () => {
+			this.browserWindow.webContents.send('window.focus');
+		});
+
 		return this;
 	}
 };

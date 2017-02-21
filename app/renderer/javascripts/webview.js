@@ -40,6 +40,10 @@ module.exports = class Webview {
 			this.goToOffset(offset);
 		});
 
+		ipcRenderer.on('window.focus', () => {
+			this.$el.focus();
+		});
+
 		RadioRadio.subscribe('navigate.loadURL', (data) => {
 			this.loadURL(data.url);
 		});
