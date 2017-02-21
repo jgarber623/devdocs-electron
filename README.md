@@ -21,7 +21,7 @@ The prompt is a side effect of devdocs-electron not being a "signed" macOS app. 
 
 ## Contributing
 
-If you'd like to help improve devdocs-electron, give a look through this project's [CONTRIBUTING.md](https://github.com/jgarber623/devdocs-electron/bÂlob/master/CONTRIBUTING.md).
+If you'd like to help improve devdocs-electron, give a look through this project's [CONTRIBUTING.md](https://github.com/jgarber623/devdocs-electron/blob/master/CONTRIBUTING.md).
 
 ## Acknowledgments
 
