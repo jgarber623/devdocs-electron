@@ -1,6 +1,7 @@
 # devdocs-electron
 
-[![Downloads](https://img.shields.io/github/downloads/jgarber623/devdocs-electron/total.svg)](https://github.com/jgarber623/devdocs-electron/releases)
+![Release](https://img.shields.io/github/release/jgarber623/devdocs-electron.svg)
+![Downloads](https://img.shields.io/github/downloads/jgarber623/devdocs-electron/total.svg)
 
 devdocs-electron is a macOS app built using [Electron](http://electron.atom.io/) for the [DevDocs API Documentation Browser](http://devdocs.io/) website. It doesn't do much more than wrap the DevDocs website, but frankly, that's the point.
 
